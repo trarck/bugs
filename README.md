@@ -1,1 +1,1 @@
-hH
+this is a simple game
