@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
  <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>²È³æ×Ó</title>
+  <title>è¸©è™«å­</title>
  </head>
 
  <body>
@@ -26,7 +26,7 @@
             height:500,
             sceneRadius:500
         };
-        //È«¾ÖÊı¾İ
+        //å…¨å±€æ•°æ®
         var YHBug=game={
             resources:null,
             mainTimeLine:null
@@ -52,20 +52,20 @@
         var MorphShape=yhge.renderer.canvas.swf.MorphShape;
         var Player=YHBug.Player;
         
-        //³õÊ¼»¯ÒıÇæ
+        //åˆå§‹åŒ–å¼•æ“
         var engine=new yhge.Engine({
             canvas:"canvas",
             renderer:"canvas",
             interval:5,
             forceInterval:false
         });
-        //¿ÉÒÔÊ¹ÓÃ
+        //å¯ä»¥ä½¿ç”¨
         if(engine.enable){
-            //½¨Á¢×ÊÔ´¡£
-            //½¨Á¢ËùÓĞshapeºÍMorphShape(¿É²»½¨Á¢£¬Ö±½ÓÊ¹ÓÃ¶¨Òå)
-            //spriteµÄ¶şÖÖ·½Ê½¡£µÚÒ»ÖÖ£º¶¼Éú³ÉMovieClip,Ê¹ÓÃclone·½·¨È¡µÃĞÂµÄÎïÌå¡£flashµ¼¹ıÀ´µÄ×ÊÔ´½¨ÒéÊ¹ÓÃ¡£
-            //                  µÚ¶şÖÖ£ºÖ±½ÓÊ¹ÓÃ¶¨Òå£¬Ê¹ÓÃµÄÊ±ºòÊ¹ÓÃ¹¤×÷·½·¨MovieClip.createMovieClipÈ¡µÃ¡£´Ë·½·¨²»ÊÊºÏsprite°üº¬spriteµÄÇé¿ö£¬Èç¹û°üº¬spriteÔòÒª×ö»º´æ
-            //TODO »º´æshape¡£°Ñshape»­µ½Ò»¸öcanvasÉÏ£¬×÷ÎªÍ¼Æ¬Ê¹ÓÃ¡£
+            //å»ºç«‹èµ„æºã€‚
+            //å»ºç«‹æ‰€æœ‰shapeå’ŒMorphShape(å¯ä¸å»ºç«‹ï¼Œç›´æ¥ä½¿ç”¨å®šä¹‰)
+            //spriteçš„äºŒç§æ–¹å¼ã€‚ç¬¬ä¸€ç§ï¼šéƒ½ç”ŸæˆMovieClip,ä½¿ç”¨cloneæ–¹æ³•å–å¾—æ–°çš„ç‰©ä½“ã€‚flashå¯¼è¿‡æ¥çš„èµ„æºå»ºè®®ä½¿ç”¨ã€‚
+            //                  ç¬¬äºŒç§ï¼šç›´æ¥ä½¿ç”¨å®šä¹‰ï¼Œä½¿ç”¨çš„æ—¶å€™ä½¿ç”¨å·¥ä½œæ–¹æ³•MovieClip.createMovieClipå–å¾—ã€‚æ­¤æ–¹æ³•ä¸é€‚åˆspriteåŒ…å«spriteçš„æƒ…å†µï¼Œå¦‚æœåŒ…å«spriteåˆ™è¦åšç¼“å­˜
+            //TODO ç¼“å­˜shapeã€‚æŠŠshapeç”»åˆ°ä¸€ä¸ªcanvasä¸Šï¼Œä½œä¸ºå›¾ç‰‡ä½¿ç”¨ã€‚
             var bugCategories=[71,74,76,78,80];
             var resources={},animations={};
             for(var id in datas){
@@ -87,13 +87,13 @@
             var score=0,totalBug=12,baseBug=4,incrementBug=2;
             var bugs=[];
             //alert("engine init sucess!");
-            //´´½¨¶¯»­Ö÷Ê±¼äÏß
+            //åˆ›å»ºåŠ¨ç”»ä¸»æ—¶é—´çº¿
             var mainTimeLine=new AnimationGroup({
                 duration:1000/20,
             });
             engine.animationManager.add(mainTimeLine);
             game.mainTimeLine=mainTimeLine;
-            //´´½¨³¡¾°
+            //åˆ›å»ºåœºæ™¯
             singleSceneUpdater=SingleSceneUpdater.getInstance(engine.scheduler,engine.context);
             var sceneWidth=500,sceneHeight=500;
             var scene=new Scene({
@@ -103,7 +103,7 @@
             singleSceneUpdater.setScene(scene);
             
 
-            //´´½¨±³¾°
+            //åˆ›å»ºèƒŒæ™¯
             var bgImg=new Image();
             bgImg.src="images/bg.jpg";
 
@@ -114,9 +114,9 @@
             });
             scene.addChild(bg);
 
-            //´´½¨¹ÖÎï
+            //åˆ›å»ºæ€ªç‰©
             createMonsters2(totalBug,baseBug,incrementBug);
-            //´´½¨ÈËÎï
+            //åˆ›å»ºäººç‰©
             var mainPlayer=new Player({
                 radius:15,
                 speed:6,
